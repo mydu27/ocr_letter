@@ -15,12 +15,13 @@ RUN echo 'Asia/Shanghai' >/etc/timezone
 RUN apt-get update
 
 # 安装vim
-RUN apt-get install -y vim&apt-get install tesseract-ocr&apt-get install tesseract-ocr-eng
+RUN apt-get install -y vim
+
+# 安装ocr识别库
+RUN apt install tesseract-ocr -y
 
 # 安装项目依赖文件到容器
 RUN pip install --no-cache-dir -r /home/ocr_server/requirements.txt
-
-RUN mkdir -p /var/log/supervisor&&chmod 777 /var/log/supervisor&&touch /var/log/supervisor/supervisord.log
 
 
 #运行启动文件
