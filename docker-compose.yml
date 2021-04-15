@@ -1,4 +1,3 @@
-redis和mysql的持久化启动，需要配置mysql和redis的配置文件和数据存放地址
 version: '3.1'
 services:
   ocr_letter_server_v1.0:
