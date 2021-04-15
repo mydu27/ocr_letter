@@ -1,0 +1,22 @@
+redis和mysql的持久化启动，需要配置mysql和redis的配置文件和数据存放地址
+version: '3.1'
+services:
+  ocr_letter_server_v1.0:
+    container_name: ocr_letter_server_v1.0
+    build:           # your file path
+    image: ocr_letter_server:1.0
+    privileged: true
+    restart: unless-stopped
+    ports:
+      - 8020:8000
+    environment:
+      # -------mysql-------
+      mysqlIp:        # your_ip
+      mysqlPort:      # your_port
+      dbName:         # your_db
+      mysqlUser:      # your_username
+      mysqlPwd:       # your_password
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5g"
