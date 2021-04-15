@@ -16,9 +16,7 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
     app.config['WTF_CSRF_ENABLED'] = False
     db.init_app(app)
-    print('xxxxxxxxxxx')
     with app.app_context():
-        print('bbbbbbbbb')
         db.create_all(app=app)
 
     return app
