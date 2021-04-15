@@ -51,7 +51,7 @@
 
     在mysqlPwd项填写自己mysql的密码
 
-    配置好通过docker-compose来启动项目
+    配置好通过docker-compose来自动构建docker镜像并启动项目
 
     sudo docker-compose up -d
     ```
