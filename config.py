@@ -6,11 +6,11 @@ config = Config(".env")
 URL_FIX = '/api/v1'
 
 # -------mysql-------
-mysqlIp = config("mysqlIp", default='172.16.10.183')
-mysqlPort = config("mysqlPort", cast=int, default=5306)
+mysqlIp = config("mysqlIp", default='127.0.0.1')
+mysqlPort = config("mysqlPort", cast=int, default=3306)
 dbName = config("dbName", default='test')
 mysqlUser = config("mysqlUser", default='root')
-mysqlPwd = config("mysqlPwd", default='pujian123')
+mysqlPwd = config("mysqlPwd", default='123456')
 savePath = config("savePath", default='./images/')
 
 # mysql 数据库
